@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy – IC Helper</title>
+  <title>Privacy Policy – IC Parser + Query Generator</title>
   <style>
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -14,27 +14,13 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-    h1, h2 {
-      line-height: 1.25;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      margin-top: 2em;
-      font-size: 1.3rem;
-    }
-    p {
-      margin: 0.6em 0;
-    }
-    ul {
-      margin-left: 1.2em;
-    }
-    .muted {
-      color: #555;
-      font-size: 0.95em;
-    }
+    h1, h2 { line-height: 1.25; }
+    h1 { font-size: 2rem; margin-bottom: 0.2em; }
+    h2 { margin-top: 2em; font-size: 1.3rem; }
+    p { margin: 0.6em 0; }
+    ul { margin-left: 1.2em; }
+    code { background: #f3f3f3; padding: 0.1em 0.3em; border-radius: 4px; }
+    .muted { color: #555; font-size: 0.95em; }
     footer {
       margin-top: 3em;
       padding-top: 1em;
@@ -46,94 +32,77 @@
 </head>
 <body>
 
-  <h1>Privacy Policy – IC Helper</h1>
+  <h1>Privacy Policy – IC Parser + Query Generator</h1>
   <p class="muted"><strong>Last updated:</strong> February 2026</p>
 
   <h2>Overview</h2>
   <p>
-    IC Helper is a browser extension designed to assist users in finding related
-    Star Citizen Issue Council reports by extracting issue details from the
-    currently viewed page and retrieving matching results from a user-configured server.
+    IC Parser + Query Generator is a browser extension that helps users find related
+    Star Citizen Issue Council reports. When a user activates the extension on an
+    Issue Council page, the extension extracts issue details from the page and sends
+    them to a companion API service to return matching results.
   </p>
 
   <h2>Data Collection</h2>
   <p>
-    The extension <strong>does not collect, store, or transmit any personal data</strong>.
+    The extension <strong>does not collect, sell, or share personal data</strong>.
+    The extension does not use analytics or tracking tools.
   </p>
-  <p>The extension does not:</p>
-  <ul>
-    <li>collect personally identifiable information</li>
-    <li>track browsing activity</li>
-    <li>store page content</li>
-    <li>use analytics or tracking services</li>
-  </ul>
 
   <h2>Page Access</h2>
   <p>
-    When the user activates the extension, it temporarily reads content from the
-    currently active Issue Council page (such as the issue title, description,
-    and reproduction steps) in order to perform a match query.
-  </p>
-  <p>
-    This access occurs only after explicit user interaction and is limited to the active tab.
+    The extension accesses content on the active Issue Council tab only to extract issue details
+    (such as title, description, and reproduction steps) to perform a match query.
+    This occurs only when the user interacts with the extension.
   </p>
 
   <h2>Remote Communication</h2>
   <p>
-    The extension sends extracted issue text to a user-configured server endpoint
-    solely for the purpose of retrieving matching issue results.
+    The extension sends extracted issue text to a companion API endpoint operated by the developer
+    to retrieve matching results. Data sent is limited to the issue information visible on the page
+    and is used only to generate the requested results.
   </p>
   <p>
-    The data sent is limited to the issue content visible on the page and is not
-    retained by the extension.
-  </p>
-  <p>
-    No executable code is downloaded or executed from remote servers.
+    The extension does not download or execute remote code. All executable extension code is packaged
+    with the extension (for example, <code>content.js</code>).
   </p>
 
   <h2>Local Storage</h2>
   <p>
-    The extension may store limited configuration data locally on the user’s device,
-    including:
+    The extension may store limited settings locally on the user’s device using Chrome extension storage,
+    such as:
   </p>
   <ul>
-    <li>the selected server URL</li>
-    <li>an optional access token for that server</li>
-    <li>user interface preferences</li>
+    <li>user interface preferences (for example, panel visibility)</li>
+    <li>an optional access token/password (if provided by the user) used to authenticate requests to the companion API</li>
   </ul>
   <p>
-    This information is stored using Chrome’s local extension storage and is never
-    shared with third parties.
+    This information is stored only on the user’s device and is not sold or shared with third parties.
   </p>
 
   <h2>Data Sharing</h2>
   <p>
-    The extension does <strong>not</strong> sell, share, or transfer data to third parties.
-    All communication occurs only between the user’s browser and the user-configured server.
+    The extension does not sell, rent, or share personal data with third parties.
+    Communication occurs only between the user’s browser and the companion API service used to return results.
   </p>
 
   <h2>User Control</h2>
   <p>
-    Users can remove all locally stored data at any time by clearing the extension’s
-    settings or uninstalling the extension.
+    Users can remove locally stored settings at any time by clearing the extension’s data or uninstalling the extension.
   </p>
 
   <h2>Changes to This Policy</h2>
   <p>
-    If the extension’s functionality changes in a way that affects data handling,
-    this privacy policy will be updated accordingly.
+    If the extension’s functionality changes in a way that affects data handling, this privacy policy will be updated.
   </p>
 
   <h2>Contact</h2>
   <p>
-    For questions about this privacy policy, please contact the extension developer
-    via the Chrome Web Store listing.
+    For questions about this privacy policy, please contact the developer via the Chrome Web Store listing.
   </p>
 
   <footer>
-    <p>
-      This privacy policy applies solely to the IC Helper browser extension.
-    </p>
+    <p>This privacy policy applies solely to the IC Parser + Query Generator browser extension.</p>
   </footer>
 
 </body>
